@@ -47,7 +47,7 @@ I’m a cloud-focused Systems Engineer with **5+ years of experience** designing
 - 📍 Based in Bangor, ME — open to remote or U.S.-based opportunities  
 - ✉️ Email: [alexpina1050@gmail.com](mailto:alexpina1050@gmail.com)  
 - 🔗 LinkedIn: [linkedin.com/in/alexander-pina1050](https://www.linkedin.com/in/alexander-pina1050/)  
-- 💻 GitHub: [github.com/alexpina1050](https://github.com/alexpina1050)
+- 💻 GitHub: [github.com/alexpina1050](https://github.com/alexp-eng)
 
 ---
 
