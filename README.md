@@ -1,4 +1,4 @@
-# 👋 Hi, I’m Alexander Pina
+# 👋 Hi, I’m Alex
 
 💻 **Systems Engineer | Cloud Infrastructure (Azure & AWS) | Automation & IaC**
 
