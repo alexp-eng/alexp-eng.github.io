@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{NAME}} | {{ROLE}}</title>
+  <meta name="description" content="{{TAGLINE}}">
+  <meta property="og:title" content="{{NAME}} | {{ROLE}}">
+  <meta property="og:description" content="{{TAGLINE}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://{{GITHUB_USERNAME}}.github.io/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>">
+  <style>
+    :root{
+      --bg: #0b0f14;
+      --card: #111826;
+      --muted: #9aa4b2;
+      --text: #e6edf3;
+      --accent: #60a5fa;
+      --accent-2: #34d399;
+      --border: #1f2937;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --muted: #425466;
+        --text: #0f172a;
+        --accent: #2563eb;
+        --accent-2: #059669;
+        --border: #e2e8f0;
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.65;
+    }
+    .container{max-width:1000px;margin:0 auto;padding:2rem 1rem}
+    header{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-bottom:2rem}
+    .brand{display:flex;gap:1rem;align-items:center}
+    .avatar{
+      width:72px;height:72px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;
+      color:white;font-weight:700;font-size:1.5rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,.25);
+    }
+    .title h1{margin:0;font-size:1.75rem}
+    .title p{margin:.15rem 0 0;color:var(--muted)}
+    nav a{
+      padding:.6rem .9rem;border:1px solid var(--border);border-radius:12px;
+      text-decoration:none;color:var(--text);display:inline-block;margin-left:.25rem;
+    }
+    nav a:hover{border-color:var(--accent); color:var(--accent)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+    .card{
+      background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.25rem;
+    }
+    h2{margin:.2rem 0 1rem 0;font-size:1.1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    ul{padding-left:1.1rem;margin:.25rem 0}
+    .tag{display:inline-block;padding:.35rem .6rem;border:1px solid var(--border);border-radius:999px;margin:.2rem .25rem 0 0;font-size:.9rem;color:var(--muted)}
+    .muted{color:var(--muted)}
+    .exp{margin-bottom:1rem}
+    .exp h3{margin:.1rem 0}
+    .exp .where{color:var(--muted)}
+    footer{margin:2rem 0;color:var(--muted);text-align:center}
+    .btn{
+      background: var(--accent); color:white; text-decoration:none;
+      padding:.65rem 1rem; border-radius:12px; border: none; display:inline-block; font-weight:600;
+    }
+    .btn:hover{filter:brightness(1.05)}
+    code{background:rgba(127,127,127,.12);padding:.2rem .35rem;border-radius:6px}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"{{NAME}}",
+    "jobTitle":"{{ROLE}}",
+    "url":"https://{{GITHUB_USERNAME}}.github.io/",
+    "sameAs":[
+      "https://www.linkedin.com/in/{{LINKEDIN_SLUG}}/",
+      "https://github.com/{{GITHUB_USERNAME}}"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">{{INITIALS}}</div>
+        <div class="title">
+          <h1>{{NAME}}</h1>
+          <p>{{ROLE}} &nbsp;•&nbsp; {{LOCATION}}</p>
+        </div>
+      </div>
+      <nav>
+        <a href="mailto:{{EMAIL}}">Email</a>
+        <a href="https://www.linkedin.com/in/{{LINKEDIN_SLUG}}/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/{{GITHUB_USERNAME}}" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="./resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </header>
+
+    <section class="card" style="grid-column: 1 / -1; margin-bottom:1rem;">
+      <h2>About</h2>
+      <p>{{TAGLINE}}</p>
+      <p class="muted">Actively expanding skills in DevOps, Infrastructure as Code, and automation.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card" style="grid-column: span 7;">
+        <h2>Experience</h2>
+
+        <!-- Duplicate .exp blocks as needed -->
+        <div class="exp">
+          <h3>{{ROLE_1}} <span class="where">— {{COMPANY_1}}</span></h3>
+          <div class="muted">{{DATES_1}}</div>
+          <ul>
+            <li>Designed and deployed scalable cloud environments in Azure/AWS with SSO.</li>
+            <li>Implemented monitoring and automation to reduce downtime and toil.</li>
+            <li>Led/mentored teammates and drove cross-functional initiatives.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <h3>{{ROLE_2}} <span class="where">— {{COMPANY_2}}</span></h3>
+          <div class="muted">{{DATES_2}}</div>
+          <ul>
+            <li>Managed virtualization stacks (Hyper‑V/VMware), storage, and networks.</li>
+            <li>Owned patching, backup/recovery, and high availability for critical systems.</li>
+            <li>Administered AD/Azure AD (Entra ID), O365, IIS.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <h3>{{ROLE_3}} <span class="where">— {{COMPANY_3}}</span></h3>
+          <div class="muted">{{DATES_3}}</div>
+          <ul>
+            <li>Frontline IT support, automation-minded process improvements.</li>
+            <li>Security tooling deployment and monitoring.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="grid-column: span 5;">
+        <h2>Skills</h2>
+        <div class="tag">Azure</div><div class="tag">AWS</div><div class="tag">GCP (basic)</div>
+        <div class="tag">Windows Server</div><div class="tag">Linux</div><div class="tag">Networking</div>
+        <div class="tag">Terraform</div><div class="tag">PowerShell</div><div class="tag">Python</div>
+        <div class="tag">Azure Monitor</div><div class="tag">Azure AD (Entra ID)</div><div class="tag">O365</div>
+        <div class="tag">VMware</div><div class="tag">Hyper‑V</div><div class="tag">SQL Server</div>
+        <div class="tag">IIS</div><div class="tag">Veeam</div><div class="tag">Datto</div>
+      </div>
+
+      <div class="card" style="grid-column: span 7;">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>IaC: </strong>Reusable Terraform modules for {{CLOUD_PROVIDER}} (link to repo)</li>
+          <li><strong>Automation: </strong>PowerShell runbooks for patching/backup validation</li>
+          <li><strong>Observability: </strong>Azure Monitor dashboards for cost and uptime</li>
+        </ul>
+      </div>
+
+      <div class="card" style="grid-column: span 5;">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Microsoft Certified: Azure Solutions Architect Expert</li>
+          <li>Microsoft Certified: Azure Administrator Associate</li>
+          <li>Microsoft Certified: Azure Network Engineer Associate</li>
+          <li>AWS Certified Cloud Practitioner</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" style="grid-column: 1 / -1; margin-top:1rem;">
+      <h2>Contact</h2>
+      <p>Best way to reach me is <a href="mailto:{{EMAIL}}">email</a>. Open to roles in {{TARGET_REGIONS}}.</p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> {{NAME}} — Built with GitHub Pages
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
